@@ -171,7 +171,7 @@ const App: React.FC = () => {
     setSelectedWarehouse(null);
     setSelectedApplicationId(null);
 
-    if (page === 'Resource summary' && additionalState?.tab) {
+    if (page === 'Resource' && additionalState?.tab) {
         setResourceSummaryTab(additionalState.tab);
     }
 
@@ -337,7 +337,7 @@ const App: React.FC = () => {
   };
 
   const handleSelectAccount = (account: Account, initialPage?: string, sourceTab?: string) => {
-      if (activePage === 'Resource summary' && sourceTab) {
+      if (activePage === 'Resource' && sourceTab) {
           setResourceSummaryTab(sourceTab);
       }
       
@@ -557,7 +557,7 @@ const App: React.FC = () => {
     
     switch (activePage) {
         case 'AI data cloud overview': return <Overview onSelectAccount={handleSelectAccount} onSelectUser={setSelectedUser} accounts={accounts} users={users} onSetBigScreenWidget={setBigScreenWidget} currentUser={currentUser} onNavigate={handleSetActivePage} onAddAccountClick={() => setSidePanel({ type: 'addAccount' })} />;
-        case 'Resource summary': return <ResourceSummary initialTab={resourceSummaryTab} onSelectAccount={handleSelectAccount} onSelectApplication={handleSelectApplication} onNavigateToRecommendations={(filters) => handleSetActivePage('Recommendations', undefined, { filters })} />;
+        case 'Resource': return <ResourceSummary initialTab={resourceSummaryTab} onSelectAccount={handleSelectAccount} onSelectApplication={handleSelectApplication} onNavigateToRecommendations={(filters) => handleSetActivePage('Recommendations', undefined, { filters })} />;
         case 'Accounts': return <Connections accounts={accounts} onSelectAccount={handleSelectAccount} onAddAccountClick={() => setSidePanel({ type: 'addAccount' })} onDeleteAccount={(id) => setAccounts(a => a.filter(x => x.id !== id))} />;
         case 'AI agent': return <AIAgent />;
         case 'Recommendations': return <Recommendations accounts={accounts} currentUser={currentUser} initialFilters={recommendationFilters} onNavigateToQuery={(q) => {setSelectedAccount(accounts[0]); setSelectedQuery(q as QueryListItem);}} onNavigateToWarehouse={(wh) => {setSelectedAccount(accounts[0]); setSelectedWarehouse(wh as Warehouse);}} onAssignTask={handleAssignQueryTask} onOptimizeRecommendation={handleOptimizeRecommendation} selectedRecommendation={selectedRecommendation} onSelectRecommendation={setSelectedRecommendation} onBackToSource={handleBackToSource} returnContext={returnContext} />;

@@ -407,7 +407,7 @@ export const accountNavItems = [
 export const NAV_ITEMS_TOP: NavItem[] = [
     { name: 'AI data cloud overview', icon: IconCloudOverview },
     { name: 'Dashboards', icon: IconDashboard },
-    { name: 'Resource summary', icon: IconAdjustments },
+    { name: 'Resource', icon: IconAdjustments },
     { name: 'Accounts', icon: IconConnections },
     { 
         name: 'Workspace', 

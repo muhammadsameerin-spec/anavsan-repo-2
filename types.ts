@@ -7,7 +7,7 @@ export type Page =
   | 'Accounts' 
   | 'Snowflake accounts'
   | 'Recommendations'
-  | 'Resource summary'
+  | 'Resource'
   | 'Workspace'
   | 'Query vault'
   | 'Assigned tasks'

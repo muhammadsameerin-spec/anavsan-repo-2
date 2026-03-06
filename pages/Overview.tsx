@@ -417,7 +417,7 @@ const Overview: React.FC<OverviewProps> = ({ accounts, onSelectAccount, onSelect
                 <div className="bg-white rounded-[24px] border border-border-light shadow-sm p-4 flex flex-col gap-4">
                     <div className="flex justify-between items-center px-1">
                         <div className="flex items-center gap-2">
-                            <h2 className="text-[14px] font-semibold text-text-primary tracking-tight">Resource summary</h2>
+                            <h2 className="text-[14px] font-semibold text-text-primary tracking-tight">Resource</h2>
                             <IconInfo className="w-4 h-4 text-[#9A9AB2]" />
                         </div>
                         <button className="p-1 rounded-full hover:bg-surface-nested transition-colors text-[#9A9AB2]">
@@ -430,47 +430,47 @@ const Overview: React.FC<OverviewProps> = ({ accounts, onSelectAccount, onSelect
                             label="Accounts" 
                             value="8" 
                             subValue="48.5K Credits" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'Accounts' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'Accounts' })} 
                         />
                         <SummaryMetricCard 
                             label="Compute" 
                             value="44.25K" 
                             subValue="Credits"
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'Compute' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'Compute' })} 
                         />
                         <SummaryMetricCard 
                             label="Storage" 
                             value="36 TB" 
                             subValue="2.1K Credits" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'Storage' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'Storage' })} 
                         />
                         <SummaryMetricCard 
                             label="Workloads" 
                             value="52" 
                             subValue="168K Credits" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'Workloads' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'Workloads' })} 
                         />
                         <SummaryMetricCard 
                             label="Services" 
                             value="7" 
                             subValue="6.8K Credits" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'Services' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'Services' })} 
                         />
                         <SummaryMetricCard 
                             label="Cortex" 
                             value="1.5K" 
                             subValue="Credits" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'Cortex' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'Cortex' })} 
                         />
                         <SummaryMetricCard 
                             label="Users" 
                             value="43" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'User' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'User' })} 
                         />
                         <SummaryMetricCard 
                             label="Queries" 
                             value="950" 
-                            onClick={() => onNavigate('Resource summary', undefined, { tab: 'High-impact queries' })} 
+                            onClick={() => onNavigate('Resource', undefined, { tab: 'High-impact queries' })} 
                         />
                     </div>
                 </div>
@@ -486,7 +486,7 @@ const Overview: React.FC<OverviewProps> = ({ accounts, onSelectAccount, onSelect
 
                 <WidgetCard 
                     title="Top accounts by credits" 
-                    headerActions={<button onClick={() => onNavigate('Resource summary', undefined, { tab: 'Accounts' })} className="text-[11px] font-bold text-link hover:underline">View all</button>}
+                    headerActions={<button onClick={() => onNavigate('Resource', undefined, { tab: 'Accounts' })} className="text-[11px] font-bold text-link hover:underline">View all</button>}
                 >
                     <div className="h-[350px] flex flex-col">
                         <ResponsiveContainer width="100%" height="100%">

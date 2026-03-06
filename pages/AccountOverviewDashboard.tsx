@@ -205,7 +205,7 @@ const AccountOverviewDashboard: React.FC<AccountOverviewDashboardProps> = ({ acc
             <div className="bg-white rounded-[24px] border border-border-light shadow-sm p-6 flex flex-col gap-6">
                 <div className="flex justify-between items-center px-1">
                     <div className="flex items-center gap-2">
-                        <h2 className="text-[14px] font-bold text-text-primary tracking-tight">Resource summary</h2>
+                        <h2 className="text-[14px] font-bold text-text-primary tracking-tight">Resource</h2>
                         <IconInfo className="w-4 h-4 text-[#9A9AB2]" />
                     </div>
                 </div>

@@ -388,7 +388,7 @@ const ResourceSummary: React.FC<ResourceSummaryProps> = ({ initialTab, onNavigat
     return (
         <div className="flex flex-col h-full bg-background p-4 pb-12 overflow-y-auto no-scrollbar gap-4">
             <div className="flex flex-col flex-shrink-0">
-                <h1 className="text-[28px] font-bold text-text-strong tracking-tight">Resource summary</h1>
+                <h1 className="text-[28px] font-bold text-text-strong tracking-tight">Resource</h1>
                 <div className="mt-4 border-b border-border-light flex items-center gap-8 overflow-x-auto no-scrollbar">
                     {categories.map(cat => (
                         <button
